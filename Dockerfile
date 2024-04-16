@@ -9,4 +9,4 @@ RUN apk --no-cache add ca-certificates bcc-tools && ls -laF /usr/share/bcc/tools
 WORKDIR /app/
 COPY --from=0 /go/src/github.com/flowerinthenight/oomkill-trace/oomkill-trace .
 ENTRYPOINT ["/app/oomkill-trace"]
-CMD [""]
+CMD ["-local=false"]
