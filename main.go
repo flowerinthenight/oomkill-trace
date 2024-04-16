@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"log/slog"
 	"os"
@@ -11,9 +12,19 @@ import (
 	"syscall"
 )
 
+var (
+	local = flag.Bool("local", false, "Run locally")
+)
+
 func main() {
+	flag.Parse()
+	cmdline := "/usr/share/bcc/tools/execsnoop" // test, alpine
+	if *local {
+		cmdline = "execsnoop-bpfcc" // my local (Pop!_OS)
+	}
+
 	// cmd := exec.Command("oomkill-bpfcc")
-	cmd := exec.Command("execsnoop-bpfcc") // test
+	cmd := exec.Command(cmdline)
 	cmd.SysProcAttr = &syscall.SysProcAttr{Setpgid: true}
 	outpipe, err := cmd.StdoutPipe()
 	if err != nil {
