@@ -1,4 +1,7 @@
 ```sh
+# Build:
+$ docker build --rm -t oomkill-trace .
+
 # Run using docker:
 $ docker run \
     -it \
