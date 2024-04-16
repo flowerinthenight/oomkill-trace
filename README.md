@@ -1,3 +1,5 @@
+[![main](https://github.com/flowerinthenight/oomkill-trace/actions/workflows/main.yml/badge.svg)](https://github.com/flowerinthenight/oomkill-trace/actions/workflows/main.yml)
+
 ```sh
 # Build:
 $ docker build --rm -t oomkill-trace .
