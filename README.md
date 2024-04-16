@@ -1,4 +1,5 @@
-```
+```sh
+# Run using docker:
 $ docker run \
     -it \
     --rm \
