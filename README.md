@@ -1,6 +1,6 @@
 [![main](https://github.com/flowerinthenight/oomkill-trace/actions/workflows/main.yml/badge.svg)](https://github.com/flowerinthenight/oomkill-trace/actions/workflows/main.yml)
 
-**NOTE: Unfinished, don't use.**
+**NOTE: Unfinished, don't use. Check out [`oomkill-watch`](https://github.com/flowerinthenight/oomkill-watch) instead.**
 
 ```sh
 # Build:
